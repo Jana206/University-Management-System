@@ -61,19 +61,19 @@ Entity Framework Core migrations are included in the repository so the database 
 
 ### Dashboard
 
-![Dashboard](Screenshots/dashboard.png)
+![Dashboard](StudentManagementWeb/Screenshots/dashboard.png)
 
 ### Students
 
-![Students](Screenshots/students.png)
+![Students](StudentManagementWeb/Screenshots/students.png)
 
 ### Departments
 
-![Departments](Screenshots/departments.png)
+![Departments](StudentManagementWeb/Screenshots/departments.png)
 
 ### Department Details
 
-![Department Details](Screenshots/department-details.png)
+![Department Details](StudentManagementWeb/Screenshots/department-details.png)
 
 ## Getting Started
 
