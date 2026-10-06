@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-header">
+    <h1 class="display-5 fw-bold">University Management System</h1>
+    <p>
+        Manage students, departments and academic records.
+    </p>
+</div>
+
+<div class="row g-4 mb-5">
+
+    <div class="col-md-6 col-xl-3">
+        <div class="card stat-card h-100">
+            <div class="card-body">
+                <p class="stat-label mb-2">Total Students</p>
+                <div class="stat-number">@ViewBag.TotalStudents</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+        <div class="card stat-card h-100">
+            <div class="card-body">
+                <p class="stat-label mb-2">Departments</p>
+                <div class="stat-number">@ViewBag.TotalDepartments</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+        <div class="card stat-card h-100">
+            <div class="card-body">
+                <p class="stat-label mb-2">Active Students</p>
+                <div class="stat-number">@ViewBag.ActiveStudents</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+        <div class="card stat-card h-100">
+            <div class="card-body">
+                <p class="stat-label mb-2">Graduated Students</p>
+                <div class="stat-number">@ViewBag.GraduatedStudents</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="quick-actions">
+    <h2 class="h4 mb-3">Quick Actions</h2>
+
+    <div class="d-flex flex-wrap gap-2">
+
+        <a class="btn btn-primary"
+           asp-controller="Students"
+           asp-action="Create">
+            Add Student
+        </a>
+
+        <a class="btn btn-outline-primary"
+           asp-controller="Departments"
+           asp-action="Create">
+            Add Department
+        </a>
+
+        <a class="btn btn-outline-secondary"
+           asp-controller="Students"
+           asp-action="Index">
+            View Students
+        </a>
+
+    </div>
+</div>

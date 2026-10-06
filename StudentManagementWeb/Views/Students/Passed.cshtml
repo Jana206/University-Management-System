@@ -1,0 +1,67 @@
+﻿@model List<Student>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h1 class="h2 mb-1">Passed Students</h1>
+        <p class="text-muted mb-0">
+            Students with a grade of 50 or higher.
+        </p>
+    </div>
+
+    <a class="btn btn-outline-secondary"
+       asp-action="Index">
+        Back to Students
+    </a>
+
+</div>
+
+<div class="table-responsive">
+
+    <table class="table table-hover align-middle">
+
+        <thead class="table-light">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Status</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (Student student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Grade</td>
+
+                    <td>
+                        @if (student.Status == StudentStatus.Active)
+                        {
+                            <span class="badge bg-success">Active</span>
+                        }
+                        else if (student.Status == StudentStatus.Graduated)
+                        {
+                            <span class="badge bg-primary">Graduated</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning text-dark">Suspended</span>
+                        }
+                    </td>
+
+                    <td>@student.Department?.Name</td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
